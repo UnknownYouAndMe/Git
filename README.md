@@ -1,2 +1,1 @@
-# Git
-Self-learning version control system Git.
+# Git 学习笔记及潜在的坑，持续更新……
