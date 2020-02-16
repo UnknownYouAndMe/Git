@@ -1,7 +1,7 @@
 # Git 教程
 [toc] 
 <center></center>
-[本教程由云主页提供：ZhuYe.Cloud](https://ZhuYe.Cloud/) &nbsp; 
+[本教程由云主页提供](https://ZhuYe.Cloud/) &nbsp; 
 
 
 # Git 全局配置及初始化仓库
@@ -43,27 +43,8 @@ $ git add .
 ```shell
 $ git commit -m "注释内容"
 ```
-> 如果提示403，permission等字样表示权限不够，修改./.git/config文件。
 
-```
-[core]
-	repositoryformatversion = 0
-	filemode = false
-	bare = false
-	logallrefupdates = true
-	symlinks = false
-	ignorecase = true
-[remote "origin"]
-	url = https://github.com/appstack/Git.git
-	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
-```
-改为：
-```
-url = https://appstack:password@github.com/appstack/Git.git #appstack:password表示账号和密码
-```
+
 
 
 
@@ -113,19 +94,77 @@ $ git reset --hard^ 版本号
 ```
 $ git clone https://github.com/appstack/Git.git 
 ```
+
+## 拉取线上仓库
+```
+$ git pull
+```
+
 ## 提交到线上仓库
 ```
 $ git push
 ```
 
-# 同步到远程仓库
-# 分支
+> 如果提示403，permission等字样表示权限不够，修改./.git/config文件。
+
 ```
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/appstack/Git.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+```
+改为：
+```
+url = https://appstack:password@github.com/appstack/Git.git #appstack:password表示账号和密码
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 分支
+```shell
+$ git branch #查看当前分支
+
 $ git branch branchName #创建新分支
 
 $ git checkout branchName #切换到新分支
 
 $ git checkout -b branchName #创建新分支并切换
+
+$ git merge dev #合并分支，把dev分支合并到当前分支中
+
+$ git branch -d dev #删除dev分支
+
+
+
+
+
+
+
+
+
+
 ```
 
 
