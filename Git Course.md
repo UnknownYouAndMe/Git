@@ -1,6 +1,8 @@
+
 # Git 教程
 [toc] 
 <center></center>
+
 [本教程由云主页提供](https://ZhuYe.Cloud/) &nbsp; 
 
 
@@ -63,11 +65,11 @@ $ git status
 
 ### 2. Changes not staged for commit
 > 说明已跟踪文件的内容发生变化,但还没有放到暂存区，要暂存这次更新，需要运行 git add 命令。
->
+> 
 > 查看具体更改了什么，使用 git diff 命令，
-> +号 绿色表示新增，
-> -号 红色表示删除，
-> Q 键退回到命令行输入。
++号 绿色表示新增，
+-号 红色表示删除，
+Q 键退回到命令行输入。
 
 ## 4. 创建.gitignore文件
 ```
@@ -168,8 +170,31 @@ $ git branch -d dev #删除dev分支
 ```
 
 
+# 解决冲突
+1. 先Git pull，git会自动将冲突合并到本地readme.txt中！
 
 
+# 忽略文件
+> .gitignore的格式规范
+> 
+> a #忽略所有 .a 结尾的文件
+> 
+> !lib.a  #但lib.a 除外
+> 
+> /TODO  #仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+> 
+> build/  #忽略build/ 目录下的所有文件
+> 
+> doc/.txt  #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+
+
+
+```
+$ touch .gitignore #创建忽略文件
+
+$ git check-ignore #规则检查
+
+```
 
 
 
