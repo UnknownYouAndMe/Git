@@ -80,6 +80,16 @@ $ git reflog #查找到所有分支的所有操作记录，包括删除的以及
 ```
 $ git reset --hard^ 版本号
 ```
+
+# 克隆线上仓库到本地
+```
+$ git clone https://github.com/appstack/Git.git 
+```
+## 提交到线上仓库
+```
+$ git push
+```
+
 # 同步到远程仓库
 # 分支
 ```
