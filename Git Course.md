@@ -1,8 +1,6 @@
-
 # Git 教程
 [toc] 
 <center></center>
-
 [本教程由云主页提供](https://ZhuYe.Cloud/) &nbsp; 
 
 
@@ -10,8 +8,8 @@
 > 空白区右击，选择“Git Bash Here”。
 ## 1. 配置
 ```
-git config --global user.name "200"
-git config --global user.email "whgreatmap@qq.com"
+git config --global user.name " "
+git config --global user.email "whgreatmap@gmail.com"
 ```
 
 [![License](https://img.shields.io/badge/license-GPL_V3.0-yellowgreen.svg)](https://github.com/wisp-x/lsky-pro/blob/master/LICENSE)
@@ -65,11 +63,11 @@ $ git status
 
 ### 2. Changes not staged for commit
 > 说明已跟踪文件的内容发生变化,但还没有放到暂存区，要暂存这次更新，需要运行 git add 命令。
-> 
+>
 > 查看具体更改了什么，使用 git diff 命令，
-+号 绿色表示新增，
--号 红色表示删除，
-Q 键退回到命令行输入。
+> +号 绿色表示新增，
+> -号 红色表示删除，
+> Q 键退回到命令行输入。
 
 ## 4. 创建.gitignore文件
 ```
@@ -176,15 +174,15 @@ $ git branch -d dev #删除dev分支
 
 # 忽略文件
 > .gitignore的格式规范
-> 
+>
 > a #忽略所有 .a 结尾的文件
-> 
+>
 > !lib.a  #但lib.a 除外
-> 
+>
 > /TODO  #仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
-> 
+>
 > build/  #忽略build/ 目录下的所有文件
-> 
+>
 > doc/.txt  #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 
 
@@ -209,11 +207,12 @@ $ git check-ignore #规则检查
 
 - QQ：
 - Email: 
-- Blog：[ZhuYe.Cloud](https://ZhuYe.Cloud/)
-
+- Blog：
+- 实用导航：[ZhuYe.Cloud](https://ZhuYe.Cloud/)
 # 鸣谢
-
-
+- GitHub
+- itcast
+- OAnote
 
 开源许可
 =
@@ -221,4 +220,3 @@ $ git check-ignore #规则检查
 [GPL 3.0](https://opensource.org/licenses/GPL-3.0)
 
 Copyright (c) 2020 [ZhuYe.Cloud](https://ZhuYe.Cloud/).
- 
