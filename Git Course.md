@@ -1,8 +1,8 @@
-# Git 教程
-[toc] 
-<center></center>
+# <center>Git 教程</center>
+
 [本教程由云主页提供](https://ZhuYe.Cloud/) &nbsp; 
 
+[toc]
 
 # Git 全局配置及初始化仓库
 > 空白区右击，选择“Git Bash Here”。
@@ -11,10 +11,6 @@
 git config --global user.name " "
 git config --global user.email "whgreatmap@gmail.com"
 ```
-
-[![License](https://img.shields.io/badge/license-GPL_V3.0-yellowgreen.svg)](https://github.com/wisp-x/lsky-pro/blob/master/LICENSE)
-[![PHP](https://img.shields.io/badge/PHP->=5.6-orange.svg)](http://php.net)
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wisp-x/lsky-pro.svg)](https://github.com/wisp-x/lsky-pro)
 
 ## 2. 初始化
 ```shell
@@ -44,15 +40,6 @@ $ git add .
 $ git commit -m "注释内容"
 ```
 
-
-
-
-
-
-
-
-
-
 ## 3. 查看当前状态
 ```
 $ git status
@@ -69,14 +56,7 @@ $ git status
 > -号 红色表示删除，
 > Q 键退回到命令行输入。
 
-## 4. 创建.gitignore文件
-```
-touch .gitignore
 
-*.class  #忽略所有.class文件
-
-!/bin/*.java  #不要忽略根目录下bin文件夹中.java文件
-```
 
 # 查看提交记录
 ```
@@ -127,21 +107,6 @@ $ git push
 url = https://appstack:password@github.com/appstack/Git.git #appstack:password表示账号和密码
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 分支
 ```shell
 $ git branch #查看当前分支
@@ -156,15 +121,7 @@ $ git merge dev #合并分支，把dev分支合并到当前分支中
 
 $ git branch -d dev #删除dev分支
 
-
-
-
-
-
-
-
-
-
+$ git log --graph 看到分支合并图
 ```
 
 
@@ -173,31 +130,22 @@ $ git branch -d dev #删除dev分支
 
 
 # 忽略文件
-> .gitignore的格式规范
->
-> a #忽略所有 .a 结尾的文件
->
-> !lib.a  #但lib.a 除外
->
-> /TODO  #仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
->
-> build/  #忽略build/ 目录下的所有文件
->
-> doc/.txt  #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
-
-
-
+## 1. 创建.gitignore文件
 ```
 $ touch .gitignore #创建忽略文件
-
+```
+## 2. 编辑.gitignore文件
+```
+*.class  #忽略所有.class文件
+build/  #忽略build/ 目录下的所有文件
+!/bin/*.java  #不要忽略根目录下bin文件夹中.java文件
+doc/.txt  #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+```
+## 3. 规则检查
+```
 $ git check-ignore #规则检查
 
 ```
-
-
-
-
-
 
 
 注意：请不要使用记事本打开修改，修改完成后保存即可。
@@ -214,9 +162,13 @@ $ git check-ignore #规则检查
 - itcast
 - OAnote
 
-开源许可
-=
+# 开源许可
 
 [GPL 3.0](https://opensource.org/licenses/GPL-3.0)
+
+
+[![License](https://img.shields.io/badge/license-GPL_V3.0-yellowgreen.svg)](https://github.com/wisp-x/lsky-pro/blob/master/LICENSE)
+[![PHP](https://img.shields.io/badge/PHP->=5.6-orange.svg)](http://php.net)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wisp-x/lsky-pro.svg)](https://github.com/wisp-x/lsky-pro)
 
 Copyright (c) 2020 [ZhuYe.Cloud](https://ZhuYe.Cloud/).
