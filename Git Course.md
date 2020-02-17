@@ -172,3 +172,63 @@ $ git check-ignore #规则检查
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/wisp-x/lsky-pro.svg)](https://github.com/wisp-x/lsky-pro)
 
 Copyright (c) 2020 [ZhuYe.Cloud](https://ZhuYe.Cloud/).
+
+---
+
+# 后续之坑
+1. 修改git全局初始化的用户名和邮箱 报错，内容如下：
+```
+$ git  config --global user.name 'ID200'
+warning: user.name has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change user.name.
+```
+使用`git  config --list`查看，发现已存在多个用户。
+```
+$ git  config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=D:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=true
+credential.helper=manager
+add.interactive.usebuiltin=true
+user.name=Doer
+user.email=intmes@qq.com
+user.name=e
+```
+解决办法：
+使用`--repalce-all` 命令
+```
+$ git config --global --replace-all user.email "输入你的邮箱"
+$ git config --global --replace-all user.name "输入你的用户名"
+```
+
+2. 与远程库进行关联并进行提交
+```
+$ git remote add 4m git@github.com:appstack/4m.git #关联了一个名叫4m的远程库
+
+$ git remote -v #查看已关联的远程库
+4m      git@github.com:appstack/4m.git (fetch)
+4m      git@github.com:appstack/4m.git (push)
+
+
+$ git remote rm 4m  #移除已有的GitHub远程库
+
+$ git push 4m master #提交至线上仓库
+
+
+```
+注意：如果提示权限不足，请更改config文件url地址
+```
+url = git@github.com:appstack/4m.git
+```
+改为:
+```
+url = https://appstack:password@github.com/appstack/4m.git
+```
